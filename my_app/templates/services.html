@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href={% static "images/logo.png" %} type="image/x-icon">
+    <!--REMIX ICONS-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/80c3c1081e.js" crossorigin="anonymous"></script>
+    <!--SWIPER CSS-->
+    <link rel="stylesheet" href={% static "css/swiper-bundle.min.css"  %}>
+     <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet">
+      <!--CSS-->
+    <link rel="stylesheet" href={% static "css/style.css"  %}>
+
+   
+    <title>ChargeSpot</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="" class="nav__logo">
+                <img style="width: 20px; height: 20px" class="logo-img" src={% static "images/logo.png" %}  alt="">
+                <!-- <i class="ri-steering-line"></i> -->
+                ChargeSpot
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/profile/" class="nav__link">Profile</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/feedback/" class="nav__link">Feedback</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/services" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/stations" class="nav__link">Stations</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/bookings" class="nav__link">bookings</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/index/" class="nav__link">logout</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+               </div>
+        </nav>
+    </header>
+    <main class="main">
+        
+       
+        <section class="featured section" id="featured">
+                <h2 class="section__title">Services</h2>
+                <div class="featured__container container">
+                    
+                    <div class="featured__content grid">
+
+                        {% for i in data %}  
+                        <article class="featured__card mix tesla">
+                            <div class="shape shape__smaller"></div>
+                            <h1 class="featured__title">{{ i.name }}</h1>
+                            <h3 class="featured__subtitle">Time: {{ i.time }}</h3>
+                            <img src={% static "images/service.png"  %}  alt="featured 1" class="featured__img">
+                            <h3 class="featured__price">Location: {{ i.location }}</h3>
+                            <h3 class="featured__price">Price :{{ i.price }}</h3>
+                            <h3 class="featured__price">Contact :{{ i.contact }}</h3>
+                            <h3 class="featured__price">Status :{{ i.status }}</h3>
+                            <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" 
+                              scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q={{i.location}}&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://mcpedls.com/">
+                                  minecraft download</a></div><style>.mapouter{position:relative;text-align:right;width:200px;height:200px;}.gmap_canvas {overflow:hidden;background:none!important;width:200px;height:200px;}.gmap_iframe {width:600px!important;height:200px!important;}</style></div>
+                            <button class="button featured__button">
+                                <a href="/payments/{{i.id}}"><i class="fa-solid fa-charging-station text-white"></i></a>
+                            </button>
+
+                        </article>
+                      {% endfor %}
+
+                        
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer class="footer section">
+        <div class="shape shape__big"></div>
+        <div class="shape shape__small"></div>
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <!-- <i class="ri-steering-line"></i> -->
+                    <img style="width: 20px; height: 20px" class="logo-img" src="./images/logo.png"  %}  alt="">
+                    ChargeSpot
+                </a>
+                <p class="footer__description">Top global EV brands?<br>
+                    Secure your charging slots<br>
+                    with ease!</p>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Information</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">About Us</a></li>
+                    <li><a href="#" class="footer__link">History</a></li>
+                    <li><a href="#" class="footer__link">User Stories</a></li>
+                    <li><a href="#" class="footer__link">Station Updates</a></li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Services & Support</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Request Assistance</a></li>
+                    <li><a href="#" class="footer__link">Charging Tips</a></li>
+                    <li><a href="#" class="footer__link">Help Center</a></li>
+                    <li><a href="#" class="footer__link">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Follow us</h3>
+                <ul class="footer___social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-twitter-line"></i>
+                    </a>
+                </ul>             
+            </div>
+        </div>    
+        <span class="footer__copy">&#169; All rigths reserveds.</span>   
+    </footer>
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <script src="{% static "js/scrollreveal.min.js"  %}"></script>
+    <script src="{% static "js/swiper-bundle.min.js"  %}"></script>
+    <script src="{% static "js/mixitup.min.js"  %}"></script>
+    <script src="{% static "js/script.js"  %}"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Services</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href={% static "css/style.css"  %}>
+
+
+</head>
+
+<body>
+
+  <form method="post" action="#">
+    {% csrf_token %}
+    <center><br><button class="button" type="submit">Update Status</button></center>
+    </form>
+
+  <div class="slide-container swiper">
+    <div class="slide-content">
+      <div class="card-wrapper swiper-wrapper">
+        {% for i in stations %}
+
+
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src={% static "images/station.png"  %} alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">{{ i.name }}</h2><br>
+            <p class="description">Time: {{ i.time }}</p>
+            <p class="description">Location: {{ i.location }}</p>
+            <p class="description">Price: {{ i.price }}</p>
+            <p class="description">Speed: {{ i.speed }}</p>
+            <p class="description">Contact: {{ i.contact }}</p><br>
+
+            <select class="button" name="status">
+              <option selected>{{i.status}}</option>
+              <option value="Not Available">Not Available</option>
+              <option value="Available">Available</option>
+              </select><br><br>
+
+              <a class="button" href="/delete_station/{{i.id}}">delete</a>
+              <a class="button" href="/ser_home">Back</a>
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+    </div>
+
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+</body>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- JavaScript -->
+<script src="{% static "js/view_service.js"  %}"></script>
+
+
+</html>
