@@ -20,6 +20,8 @@
 </head>
 
 <body>
+  
+  
 
   <form method="post" action="#">
     {% csrf_token %}
@@ -43,7 +45,7 @@
 
           <div class="card-content">
             <h2 class="name">{{ i.username }}</h2><br>
-            <p class="description">Station Name: {{ i.time }}</p>
+            <p class="description">Station Name: {{ i.name }}</p>
             <p class="description">Booking Time: {{ i.time }}</p>
             <p class="description">Location: {{ i.location }}</p>
             <p class="description">Amount Paid: {{ i.amount }}</p>
