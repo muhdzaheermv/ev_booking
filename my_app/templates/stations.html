@@ -103,25 +103,26 @@
                             <h3 class="featured__price">Speed :{{ i.speed }}</h3>
                             <h3 class="featured__price">Status :{{ i.status }}</h3>
 
-                            <form method="post" action="/payments/{{i.id}}">
+                            <form method="post" action="/payment/{{ i.id }}">
                                 {% csrf_token %}
 
+                                <button class="btn btn-primary mb-2"><a href="/slot_availability" class="text-white">Check Availability</a></button>
                                 <div class="input-group mb-3">
-                                    <input type="text" name="time" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Time">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <button type="submit" class="btn btn-primary">BOOK NOW</button>
-                                  </div>
+                                    <input type="text" name="time" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="DD/MM/YY 24 hours format">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                </div>
+                                <button type="submit" class="btn btn-primary">BOOK NOW</button>
                             </form> <br>
                             
                             <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" 
                               scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q={{i.location}}&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://mcpedls.com/">minecraft download</a></div><style>.mapouter{position:relative;text-align:right;width:200px;height:200px;}.gmap_canvas {overflow:hidden;background:none!important;width:200px;height:200px;}.gmap_iframe {width:600px!important;height:200px!important;}</style></div>
+
                               
                                 
-                                <button class="button featured__button">
-                                  <!-- <a href="/payments/{{i.id}}"><i class="fa-solid fa-charging-station text-white"></i></a> -->
-                                </button>
+    
+                                
 
                         </article>
-                      {% endfor %}
+                        {% endfor %}
 
                         
                     </div>
@@ -135,7 +136,7 @@
             <div class="footer__content">
                 <a href="#" class="footer__logo">
                     <!-- <i class="ri-steering-line"></i> -->
-                    <img style="width: 20px; height: 20px" class="logo-img" src="./images/logo.png"  %}  alt="">
+                    <img style="width: 20px; height: 20px" class="logo-img" src={% static "./images/logo.png"  %}  alt="">
                     ChargeSpot
                 </a>
                 <p class="footer__description">Top global EV brands?<br>

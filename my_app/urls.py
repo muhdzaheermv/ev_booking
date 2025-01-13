@@ -52,6 +52,7 @@ urlpatterns = [
    
    path('bookings/',views.bookings,name='bookings'),
    path('orders/',views.orders,name='orders'),
+   path('slot_availability/',views.slot_availability,name='slot_availability'),
    
    path('stations_search/',views.stations_search,name='search'),
    path('services_search/',views.services_search,name='search'),

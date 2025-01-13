@@ -25,9 +25,13 @@
 
   <form method="post" action="#">
     {% csrf_token %}
-    <center><br><button class="button" type="submit">Update Status</button></center>
+    <center><br><button class="button" type="submit">Update Status</button>
+    <a class="button" href="/stations">Back</a>
+    <p class="description">Note: If you book a time slot that is already booked,<br> the booking will automatically go to the person who booked it first. <br> Please be careful and double-check the availability before proceeding</p>
+
+
+    </center>
     </form>
-    
 
   <div class="slide-container swiper">
     <div class="slide-content">
@@ -51,7 +55,7 @@
             <p class="description">Location: {{ i.location }}</p>
             <p class="description">Amount Paid: {{ i.amount }}</p>
             <p class="description">Contact: {{ i.contact }}</p><br>
-              <a class="button" href="/ser_home">Back</a>
+              
           </div>
         </div>
         {% endfor %}

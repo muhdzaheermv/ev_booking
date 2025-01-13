@@ -419,6 +419,11 @@ def orders(request):
    values = pay.objects.filter(license_no=lcu)
    return render(request, 'orders.html', {'values': values})
 
+def slot_availability(request):
+   lcu = request.session.get('lcu')
+   values = pay.objects.filter(license_no=lcu)
+   return render(request, 'slot_availability.html', {'values': values})
+
 
 
 
