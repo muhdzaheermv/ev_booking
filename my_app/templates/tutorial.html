@@ -1,112 +1,223 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-   <title>Tutorial</title>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guide to Charging Electric Vehicles</title>
-    <style>
-        body {
-         background-image: url("{% static 'images\wp4712956-green-and-white-wallpapers.jpg' %}");
-      background-repeat: no-repeat;
-      background-attachment:scroll;
-      background-size: cover;
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 40px;
-        }
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href={% static "images/logo.png" %} type="image/x-icon">
+    <!--REMIX ICONS-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/80c3c1081e.js" crossorigin="anonymous"></script>
+    <!--SWIPER CSS-->
+    <link rel="stylesheet" href={% static "css/swiper-bundle.min.css"  %}>
+     <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-        h1, h2, h3 {
-            color: #0b0000;
-            font-variant: small-caps;
-            text-align: center;
-            padding: 15px;
-        }
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
 
-        ol {
-            margin-bottom: 20px;
-        }
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet">
+      <!--CSS-->
+    <link rel="stylesheet" href={% static "css/style.css"  %}>
 
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            color: #0c0c0c;
-        }
-        li{
-         font-size: larger;
-        }
-        p{
-         font-size: larger;
-        }
-    </style>
+   
+    <title>ChargeSpot</title>
 </head>
-
 <body>
- 
-    <h1>A Guide to Charging Your Electric Vehicle at Charging Stations</h1>
-  
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="/index/" class="nav__logo">
+                <img style="width: 20px; height: 20px" class="logo-img" src={% static "images/logo.png" %}  alt="">
+                ChargeSpot
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/index/" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/profile/" class="nav__link">Profile</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/feedback/" class="nav__link">Feedback</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/services" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/stations" class="nav__link">Stations</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/bookings" class="nav__link">bookings</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/index/" class="nav__link">logout</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+               </div>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="home section" id="home">
+            <div class="shape shape__big"></div>
+            <div class="shape shape__small"></div>
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__title">chargespot guide</h1>
+                    <h2 class="home__subtitle">Unlock Convenient Charging
+                        Learn how to easily find and book the best EV charging station for your needs.</h2>
+                    <h3 class="home__elec"><i class="ri-flashlight-fill"></i>EV</h3>
+                </div>
+                <img src={% static "images/tutorial.png"  %}  alt="home" class="home__img">
+                <div class="home__car">
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-temp-cold-line"></i>
+                        </div>
+                        <h2 class="home__car-number">24°</h2>
+                        <h3 class="home__car-name">TEMPERATURE</h3>
+                    </div>
+                
+                
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-dashboard-3-line"></i>
+                        </div>
+                        <h2 class="home__car-number">873</h2>
+                        <h3 class="home__car-name">MILEAGE</h3>
+                    </div>
+            
+               
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-flashlight-fill"></i>
+                        </div>
+                        <h2 class="home__car-number">94%</h2>
+                        <h3 class="home__car-name">BATTERY</h3>
+                    </div>
+                </div>
+                <a href="#about" class="home__button">Start</a>
+            </div>
+        </section>
+        <section class="about section" id="about">
+            <div class="about__container container">
+                    <div class="about__data">
+                        <h1 class="">
+                            A Guide to Charging Your Electric Vehicle <br> at Charging Stations
+                        </h1>
+                        <p class="about__description">
+                            Say goodbye to the hassle of finding and booking EV charging slots! ChargeSpot, an innovative web application, makes charging your electric vehicle seamless and efficient.    
+                        </p>
 
-  <h2> Introduction:</h2>
-        <p>Charging your electric vehicle (EV) at a charging station is easy and convenient. This guide provides step-by-step instructions to ensure a smooth charging experience.
-     </p>
-    <h2>Choose the Right Charging Station:</h2>
-        <ul><li>
-           Identify compatible charging stations using mobile apps or online maps.</li>
-         <li> Look for stations that support your EV’s charging plug type (e.g., CCS, CHAdeMO, Type 2).</li>
-         <li> Consider charging speed: Level 1 (slow), Level 2 (medium), or DC Fast Charging (high-speed).</li>
-        </ul>
-   <h2>Arriving at the Charging Station:</h2>
-        <ul> <li>  Park your EV in the designated charging spot.</li>
-         <li> Make sure your EV’s charging port is accessible and aligns with the station’s plug.
-        </li></ul>
-        <h2>Payment and Authorization:</h2>
-           <ul><li> Some stations require membership or RFID cards; others allow payment through mobile apps or credit cards.</li>
-            <li>Follow on-screen instructions to start the charging session.</li>
-        </ul>
-        <h2>Connecting Your EV:</h2>
-          <ul> <li> Open the charging port on your vehicle.
-          </li> <li>Insert the charging plug into your EV’s charging port securely until it clicks into place.
-           </li><li>Ensure the connection is secure to avoid interruptions.
-        </li></ul>
-        <h2>Initiating the Charging Session:</h2>
-           <ul><li>Follow the instructions on the charging station or the app to start the charging session.
-           </li><li>Verify that your EV is charging (indicated by lights/flashing on the station or your EV’s dashboard).
-        </li></ul>
-        <h2>Monitoring the Charging Process:</h2>
-           <ul><li>Most charging stations provide real-time charging status on the station display or through the mobile app.
-           </li><li> Keep an eye on your EV’s charging progress using the app or your vehicle’s dashboard.
-        </li></ul>
-        <h2>Charging Etiquette:</h2>
-           <ul><li> Be mindful of other EV owners waiting to charge; avoid leaving your vehicle plugged in after it’s fully charged.
-           </li><li>Park only in designated EV charging spots.</li></ul>
+                        <h1 class="section__title about__title">
+                            Get Started
+                        </h1>
+                        <p class="about__description">
+                            Sign Up: Create an account <br>
+                            Set Preferences: manage payment methods   
+                        </p>
+
+                        <h1 class="section__title about__title">
+                            Find & Book Slots
+                        </h1>
+                        <p class="about__description">
+                            Search Nearby Stations: Filter by location, charging type, or ratings. <br>
+                            Real-Time Availability: Check slot occupancy and wait times. <br>
+                            Reserve & Pay: Book your preferred slot and pay securely with cards or gpay,paytm wallets.   <br>
+                        </p>
+
+                        <h1 class="section__title about__title">
+                            For Charging Station Operators
+                        </h1>
+                        <p class="about__description">
+                            Manage Stations: Add or delete stations, configure slots, and set pricing. <br>
+                            Monitor Analytics: Track bookings, peak times, and station performance. <br>
+                            Stay Alert: Get notifications for maintenance and updates. <br>
+   
+                        </p>
+
+                        <h1 class="section__title about__title">
+                            Why ChargeSpot?
+                        </h1>
+                        <p class="about__description">
+                            User-Friendly: An intuitive interface for both EV owners and operators. <br>
+                            Efficient: Minimize wait times with real-time updates. <br>
+                            Data-Driven: Optimize operations with detailed analytics.    <br>
+                        </p>
+
+                        <a href="/index/" class="button">Home</a>
+                    </div>
+
+                
+            </div>
+        </section>
         
-        <h2>Ending the Charging Session:</h2>
-           <ul><li> Once your EV is sufficiently charged or you are done charging, initiate the session end through the app, RFID card, or station interface.
-           </li><li>Safely unplug the charging cable from your EV and return it to its holder (if available).
-        </li></ul>
-        <h2>Departure:</h2>
-           <ul><li> Ensure you haven’t left any personal belongings behind.
-           </li><li> Double-check that you’ve disconnected your EV from the charging station properly.
-        </li></ul>
-        <h2>Frequently Asked Questions:</h2>
-           <ul><li>Familiarize yourself with common troubleshooting steps and FAQs provided by the charging station provider.
-           </li><li> Don’t hesitate to contact customer support if you encounter issues.
-        </li>
-        <h2>Conclusion:</h2>
-       <p> Charging your EV at a charging station is a straightforward process. By following these steps and being considerate of others, you can contribute to a smooth charging experience for all electric vehicle owners. Safe travels! 
-       </p> 
-       <center>
-         <a href="/index" class="bn632-hover bn23">BACK</a>
-       </center>
-    <!-- footer section -->
-  <footer class="container-fluid footer_section">
-   <p>
-     Copyright &copy; 2023 All Rights Reserved
-   </p>
- </footer>
- <!-- footer section -->
+        
+        <section class="featured section" id="featured">
+            <div class="container">
+              </div>
+        </section>
+       
+    </main>
+    <footer class="footer section">
+        <div class="shape shape__big"></div>
+        <div class="shape shape__small"></div>
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <!-- <i class="ri-steering-line"></i> -->
+                    <img style="width: 20px; height: 20px" class="logo-img" src={% static "./images/logo.png"  %}  alt="">
+                    ChargeSpot
+                </a>
+                <p class="footer__description">Top global EV brands?<br>
+                    Secure your charging slots<br>
+                    with ease!</p>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Services & Support</h3>
+                <ul class="footer__links">
+                    <li><a href="/tutorial" class="footer__link">Help Center</a></li>
+                    <li><a href="/feedback" class="footer__link">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Follow us</h3>
+                <ul class="footer___social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-twitter-line"></i>
+                    </a>
+                </ul>             
+            </div>
+        </div>    
+        <span class="footer__copy">&#169; All rigths reserveds.</span>   
+    </footer>
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
 
+    <script src="{% static "js/scrollreveal.min.js"  %}"></script>
+    <script src="{% static "js/swiper-bundle.min.js"  %}"></script>
+    <script src="{% static "js/mixitup.min.js"  %}"></script>
+    <script src="{% static "js/script.js"  %}"></script>
+
+    
 </body>
 </html>
-

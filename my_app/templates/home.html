@@ -32,15 +32,14 @@
 <body>
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="" class="nav__logo">
+            <a href="/home" class="nav__logo">
                 <img style="width: 20px; height: 20px" class="logo-img" src={% static "images/logo.png" %}  alt="">
-                <!-- <i class="ri-steering-line"></i> -->
                 ChargeSpot
             </a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="index.html" class="nav__link active-link">Home</a>
+                        <a href="/home" class="nav__link active-link">Home</a>
                     </li>
                     <li class="nav__item">
                         <a href="/profile/" class="nav__link">Profile</a>
@@ -126,125 +125,13 @@
                         </h2>
                         <p class="about__description">At ChargeSpot, we simplify your electric vehicle experience by offering seamless booking for charging stations. Whether you're planning ahead or need a quick recharge, our platform ensures your EV is always ready to go.
                         </p>
-                        <a href="/login" class="button">See More</a>
+                        <a href="/about/" class="button">See More</a>
                     </div>
 
                 
             </div>
         </section>
-        <section class="popular section" id="popular">
-            <h2 class="section__title">Find the Perfect Charger <br> for Your EV </h2>
-            <div class="popular__container container swiper">
-                <div class="swiper-wrapper">
-                    <article class="popular__card swiper-slide">
-                       <div class="shape shape__smaller"></div>                        
-                       <h1 class="popular__title">PowerBolt X2</h1>
-                       <h3 class="popular__subtitle">Car, 2-Wheeler</h3>
-                       <img src={% static "images/1.png"  %}  alt="popular" class="popular__img">
-                       <div class="popular__data">
-                            <div class="popular__data-group">
-                                <i class="ri-dashboard-3-line"></i> 30 mins
-                            </div>
-                            <div class="popular__data-group">
-                                <i class="ri-funds-box-line"></i> 400V
-                            </div>
-                            <div class="popular__data-group">
-                                <i class="ri-charging-pile-2-line"></i> DC
-                            </div>
-                       </div>
-                       <h3 class="popular__price">$12.00/HR</h3>
-                       <button class="button popular__button">
-                            <i class="fa-solid fa-charging-station"></i>
-                       </button>
-                    </article>
-                    <article class="popular__card swiper-slide">
-                        <div class="shape shape__smaller"></div>
-                        <h1 class="popular__title">EzyCharge 75A</h1>
-                        <h3 class="popular__subtitle">Autorickshaw</h3>
-                        <img src={% static "images/2.png"  %}  alt="popular" class="popular__img">
-                        <div class="popular__data">
-                             <div class="popular__data-group">
-                                 <i class="ri-dashboard-3-line"></i> 45 mins
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-funds-box-line"></i> 230V
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-charging-pile-2-line"></i> AC
-                             </div>
-                        </div>
-                        <h3 class="popular__price">$6.50/HR</h3>
-                        <button class="button popular__button">
-                             <i class="fa-solid fa-charging-station"></i>
-                        </button>
-                     </article>
-                     <article class="popular__card swiper-slide">
-                        <div class="shape shape__smaller"></div>
-                        <h1 class="popular__title">SpeedVolt 100T</h1>
-                        <h3 class="popular__subtitle">2-Wheeler</h3>
-                        <img src={% static "images/3.png"  %}  alt="popular" class="popular__img">
-                        <div class="popular__data">
-                             <div class="popular__data-group">
-                                 <i class="ri-dashboard-3-line"></i> 20 mins
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-funds-box-line"></i> 200V
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-charging-pile-2-line"></i> AC
-                             </div>
-                        </div>
-                        <h3 class="popular__price">$5.00/HR</h3>
-                        <button class="button popular__button">
-                             <i class="fa-solid fa-charging-station"></i>
-                        </button>
-                     </article>
-                     <article class="popular__card swiper-slide">
-                        <div class="shape shape__smaller"></div>                        
-                        <h1 class="popular__title">UltraFast 300X</h1>
-                        <h3 class="popular__subtitle">Car, SUV</h3>
-                        <img src={% static "images/4.png"  %}  alt="popular" class="popular__img">
-                        <div class="popular__data">
-                             <div class="popular__data-group">
-                                 <i class="ri-dashboard-3-line"></i> 15 mins
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-funds-box-line"></i> 800V
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-charging-pile-2-line"></i> DC
-                             </div>
-                        </div>
-                        <h3 class="popular__price">$18.00/HR</h3>
-                        <button class="button popular__button">
-                             <i class="fa-solid fa-charging-station"></i>
-                        </button>
-                     </article>
-                     <article class="popular__card swiper-slide">
-                        <div class="shape shape__smaller"></div>
-                        <h1 class="popular__title">PowerBoost 50L</h1>
-                        <h3 class="popular__subtitle">2-Wheeler, Autorickshaw</h3>
-                        <img src={% static "images/5.png"  %}  alt="popular" class="popular__img">
-                        <div class="popular__data">
-                             <div class="popular__data-group">
-                                 <i class="ri-dashboard-3-line"></i> 40 mins
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-funds-box-line"></i> 220V
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-charging-pile-2-line"></i> AC
-                             </div>
-                        </div>
-                        <h3 class="popular__price">$7.00/HR</h3>
-                        <button class="button popular__button">
-                             <i class="fa-solid fa-charging-station"></i>
-                        </button>
-                     </article>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
+        
         <section class="features section">
             <h2 class="section__title">More Features</h2>
             <div class="features__container container grid">

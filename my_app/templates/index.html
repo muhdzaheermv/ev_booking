@@ -40,13 +40,16 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="index.html" class="nav__link active-link">Home</a>
+                        <a href="#" class="nav__link active-link">Home</a>
                     </li>
                     <li class="nav__item">
                         <a href="#about" class="nav__link">About</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#popular" class="nav__link">Charger</a>
+                        <a href="/tutorial" class="nav__link">Guide</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#featured" class="nav__link">Charger</a>
                     </li>
                     <li class="nav__item">
                         <a href="/login/" class="nav__link">User Signup</a>
@@ -55,7 +58,7 @@
                         <a href="/ser_login/" class="nav__link">Station Signup</a>
                     </li>
                     <li class="nav__item">
-                        <a href="/ser_register/" class="nav__link">Admin</a>
+                        <a href="/admin" class="nav__link">Admin</a>
                     </li>
                 </ul>
                 <div class="nav__close" id="nav-close">
@@ -123,125 +126,13 @@
                         </h2>
                         <p class="about__description">At ChargeSpot, we simplify your electric vehicle experience by offering seamless booking for charging stations. Whether you're planning ahead or need a quick recharge, our platform ensures your EV is always ready to go.
                         </p>
-                        <a href="/login" class="button">See More</a>
+                        <a href="/tutorial/" class="button">Guide me</a>
                     </div>
 
                 
             </div>
         </section>
-        <section class="popular section" id="popular">
-            <h2 class="section__title">Find the Perfect Charger <br> for Your EV </h2>
-            <div class="popular__container container swiper">
-                <div class="swiper-wrapper">
-                    <article class="popular__card swiper-slide">
-                       <div class="shape shape__smaller"></div>                        
-                       <h1 class="popular__title">PowerBolt X2</h1>
-                       <h3 class="popular__subtitle">Car, 2-Wheeler</h3>
-                       <img src={% static "images/1.png"  %}  alt="popular" class="popular__img">
-                       <div class="popular__data">
-                            <div class="popular__data-group">
-                                <i class="ri-dashboard-3-line"></i> 30 mins
-                            </div>
-                            <div class="popular__data-group">
-                                <i class="ri-funds-box-line"></i> 400V
-                            </div>
-                            <div class="popular__data-group">
-                                <i class="ri-charging-pile-2-line"></i> DC
-                            </div>
-                       </div>
-                       <h3 class="popular__price">$12.00/HR</h3>
-                       <button class="button popular__button">
-                            <i class="fa-solid fa-charging-station"></i>
-                       </button>
-                    </article>
-                    <article class="popular__card swiper-slide">
-                        <div class="shape shape__smaller"></div>
-                        <h1 class="popular__title">EzyCharge 75A</h1>
-                        <h3 class="popular__subtitle">Autorickshaw</h3>
-                        <img src={% static "images/2.png"  %}  alt="popular" class="popular__img">
-                        <div class="popular__data">
-                             <div class="popular__data-group">
-                                 <i class="ri-dashboard-3-line"></i> 45 mins
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-funds-box-line"></i> 230V
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-charging-pile-2-line"></i> AC
-                             </div>
-                        </div>
-                        <h3 class="popular__price">$6.50/HR</h3>
-                        <button class="button popular__button">
-                             <i class="fa-solid fa-charging-station"></i>
-                        </button>
-                     </article>
-                     <article class="popular__card swiper-slide">
-                        <div class="shape shape__smaller"></div>
-                        <h1 class="popular__title">SpeedVolt 100T</h1>
-                        <h3 class="popular__subtitle">2-Wheeler</h3>
-                        <img src={% static "images/3.png"  %}  alt="popular" class="popular__img">
-                        <div class="popular__data">
-                             <div class="popular__data-group">
-                                 <i class="ri-dashboard-3-line"></i> 20 mins
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-funds-box-line"></i> 200V
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-charging-pile-2-line"></i> AC
-                             </div>
-                        </div>
-                        <h3 class="popular__price">$5.00/HR</h3>
-                        <button class="button popular__button">
-                             <i class="fa-solid fa-charging-station"></i>
-                        </button>
-                     </article>
-                     <article class="popular__card swiper-slide">
-                        <div class="shape shape__smaller"></div>                        
-                        <h1 class="popular__title">UltraFast 300X</h1>
-                        <h3 class="popular__subtitle">Car, SUV</h3>
-                        <img src={% static "images/4.png"  %}  alt="popular" class="popular__img">
-                        <div class="popular__data">
-                             <div class="popular__data-group">
-                                 <i class="ri-dashboard-3-line"></i> 15 mins
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-funds-box-line"></i> 800V
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-charging-pile-2-line"></i> DC
-                             </div>
-                        </div>
-                        <h3 class="popular__price">$18.00/HR</h3>
-                        <button class="button popular__button">
-                             <i class="fa-solid fa-charging-station"></i>
-                        </button>
-                     </article>
-                     <article class="popular__card swiper-slide">
-                        <div class="shape shape__smaller"></div>
-                        <h1 class="popular__title">PowerBoost 50L</h1>
-                        <h3 class="popular__subtitle">2-Wheeler, Autorickshaw</h3>
-                        <img src={% static "images/5.png"  %}  alt="popular" class="popular__img">
-                        <div class="popular__data">
-                             <div class="popular__data-group">
-                                 <i class="ri-dashboard-3-line"></i> 40 mins
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-funds-box-line"></i> 220V
-                             </div>
-                             <div class="popular__data-group">
-                                 <i class="ri-charging-pile-2-line"></i> AC
-                             </div>
-                        </div>
-                        <h3 class="popular__price">$7.00/HR</h3>
-                        <button class="button popular__button">
-                             <i class="fa-solid fa-charging-station"></i>
-                        </button>
-                     </article>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
+        
         <section class="features section">
             <h2 class="section__title">More Features</h2>
             <div class="features__container container grid">
@@ -388,7 +279,7 @@
                 <div class="offer__data">
                     <h2 class="section__title offer__title">Want exclusive deals on<br>EV charging slots?</h2>
                     <p class="offer__description">Subscribe to our mailing list for updates on discounts, new stations, and more, delivered straight to your inbox!</p>
-                        <a href="/login" class="button">Subscribe Now</a>
+                        <a href="/login/" class="button">Subscribe Now</a>
                 </div>
                 <img src={% static "images/offer1.png"  %}  alt="offer description" class="offer__img">
             </div>           
@@ -423,7 +314,7 @@
             <div class="footer__content">
                 <a href="#" class="footer__logo">
                     <!-- <i class="ri-steering-line"></i> -->
-                    <img style="width: 20px; height: 20px" class="logo-img" src="./images/logo.png"  %}  alt="">
+                    <img style="width: 20px; height: 20px" class="logo-img" src={% static "./images/logo.png"  %}  alt="">
                     ChargeSpot
                 </a>
                 <p class="footer__description">Top global EV brands?<br>
@@ -431,21 +322,10 @@
                     with ease!</p>
             </div>
             <div class="footer__content">
-                <h3 class="footer__title">Information</h3>
-                <ul class="footer__links">
-                    <li><a href="#" class="footer__link">About Us</a></li>
-                    <li><a href="#" class="footer__link">History</a></li>
-                    <li><a href="#" class="footer__link">User Stories</a></li>
-                    <li><a href="#" class="footer__link">Station Updates</a></li>
-                </ul>
-            </div>
-            <div class="footer__content">
                 <h3 class="footer__title">Services & Support</h3>
                 <ul class="footer__links">
-                    <li><a href="#" class="footer__link">Request Assistance</a></li>
-                    <li><a href="#" class="footer__link">Charging Tips</a></li>
-                    <li><a href="#" class="footer__link">Help Center</a></li>
-                    <li><a href="#" class="footer__link">Contact Us</a></li>
+                    <li><a href="/tutorial" class="footer__link">Help Center</a></li>
+                    <li><a href="/feedback" class="footer__link">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer__content">

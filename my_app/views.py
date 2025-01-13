@@ -281,15 +281,15 @@ def paymenthandler(request):
                     razorpay_client.payment.capture(payment_id, amount)
  
                     # render success page on successful caputre of payment
-                    return render(request, 'pay_success.html')
+                    return render(request, 'index.html')
                 except:
  
                     # if there is an error while capturing payment.
-                    return render(request, 'pay_failed.html')
+                    return render(request, 'index.html')
             else:
  
                 # if signature verification fails.
-                return render(request, 'pay_failed.html')
+                return render(request, 'index.html')
         except:
  
             # if we don't find the required parameters in POST data

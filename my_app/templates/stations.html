@@ -20,6 +20,7 @@
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- fonts style -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet">
@@ -39,6 +40,16 @@
             </a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
+                     <li class="nav__item">
+                        <form method="post" action="/stations_search/">
+                            {% csrf_token %}
+                        <div class="input-group rounded">
+                            <input type="text" class="form-control rounded" placeholder="Search by location" name="search" aria-label="Search" aria-describedby="search-addon" />
+                               <input type="submit" class="fas fa-search btn btn-primary" value="Search">
+                            </span>
+                        </div>
+                    </form>
+                    </li>
                     <li class="nav__item">
                         <a href="/home/" class="nav__link active-link">Home</a>
                     </li>
@@ -87,17 +98,19 @@
                             <h3 class="featured__subtitle">Time: {{ i.time }}</h3>
                             <img src={% static "images/station.png"  %}  alt="featured 1" class="featured__img">
                             <h3 class="featured__price">Location: {{ i.location }}</h3>
-                            <h3 class="featured__price">Price :{{ i.price }}</h3>
-                            <h3 class="featured__price">Contact :{{ i.contact }}</h3>
-                            <h3 class="featured__price">Status :{{ i.speed }}</h3>
-                            <h3 class="featured__price">Status :{{ i.price }}</h3>
+                            <h3 class="featured__price">Price :{{ i.price }}₹</h3>
+                            <h3 class="featured__price">Contact :+91 {{ i.contact }}</h3>
+                            <h3 class="featured__price">Speed :{{ i.speed }}</h3>
+                            <h3 class="featured__price">Status :{{ i.status }}</h3>
 
-                            <form method="post" action="/payment/{{ i.id }}">
+                            <form method="post" action="/payments/{{i.id}}">
+                                {% csrf_token %}
 
-                              {% csrf_token %}
-                              <input type="text" name="time" placeholder="Select Preferred Time">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                              <button type="submit">BOOK NOW</button>
-                          </form> <br>
+                                <div class="input-group mb-3">
+                                    <input type="text" name="time" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Time">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button type="submit" class="btn btn-primary">BOOK NOW</button>
+                                  </div>
+                            </form> <br>
                             
                             <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" 
                               scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q={{i.location}}&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://mcpedls.com/">minecraft download</a></div><style>.mapouter{position:relative;text-align:right;width:200px;height:200px;}.gmap_canvas {overflow:hidden;background:none!important;width:200px;height:200px;}.gmap_iframe {width:600px!important;height:200px!important;}</style></div>

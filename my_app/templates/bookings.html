@@ -33,7 +33,7 @@
 
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="" class="nav__logo">
+            <a href="/home" class="nav__logo">
                 <img style="width: 20px; height: 20px" class="logo-img" src={% static "images/logo.png" %}  alt="">
                 <!-- <i class="ri-steering-line"></i> -->
                 ChargeSpot
@@ -87,7 +87,7 @@
                             <h3 class="featured__subtitle">Time: {{ booking.time }}</h3>
                             <img src={% static "images/booking.png"  %}  alt="featured 1" class="featured__img">
                             <h3 class="featured__price">Location: {{ booking.location }}</h3>
-                            <h3 class="featured__price">Price :{{ booking.contact }}</h3>
+                            <h3 class="featured__price">Price :{{ booking.price }}</h3>
                             <h3 class="featured__price">Contact :{{ booking.contact }}</h3>
                             <h3 class="featured__price">Status :{{ booking.amount }}</h3>
                             
