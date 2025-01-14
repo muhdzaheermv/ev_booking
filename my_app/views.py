@@ -369,42 +369,6 @@ def payments(request,id):
  
     return render(request, 'payments.html', context=context)
 
-
-
-# admin views
-
-def admin_home(request):
-    return render(request,'admin_home.html')
-
-def admin_reg(request):
-   if request.method =='POST':
-      uname = request.POST.get('runame')
-      passw = request.POST.get('rpass')
-      super_user(username=uname,password=passw).save()
-      return render(request,'admin_login.html')
-   else:
-      return render(request,'admin_reg.html')
-
-
-def admin_login(request):
-   if request.method=='POST':
-      uname = request.POST.get('runame')
-      passw = request.POST.get('rpass')
-      print(uname)
-      print(passw)
-      cr = super_user.objects.filter(username=uname,password=passw)
-      if cr:
-         details = super_user.objects.get(username=uname, password = passw)
-         username = details.username
-         request.session['cs']=username
-
-         return render(request,'admin_home.html')
-      else:
-         message="Invalid Username Or Password"
-         return render(request,'admin_login.html',{'me':message})
-   else: 
-      return render(request,'admin_login.html')
-
 # booking views
 
 def bookings(request):

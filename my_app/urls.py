@@ -46,9 +46,6 @@ urlpatterns = [
    path('payments/<int:id>',views.payments,name='payments'),
    path('paymenthandler/', views.paymenthandler, name='paymenthandler'),
    
-   path('admin_home/',views.admin_home,name='admin_home'),
-   path('admin_reg/',views.admin_reg,name='admin_reg'),
-   path('admin_login/',views.admin_login,name='admin_login'),
    
    path('bookings/',views.bookings,name='bookings'),
    path('orders/',views.orders,name='orders'),
